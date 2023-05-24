@@ -10,9 +10,9 @@ if [ "$RESP" = "y" ]; then
 	echo "Compiling "$cysbox
 	eepmake $cysbox-sn.txt $cysbox-sn.eep
 	echo "Erasing HAT Memory"
-	eepflash.sh -w -f=blank.eep -t=24c32
+	sudo eepflash.sh -w -f=blank.eep -t=24c32
 	echo "Flashing "$cysbox
-	eepflash.sh -w -f=$cysbox-sn.eep -t=24c32
+	sudo eepflash.sh -w -f=$cysbox-sn.eep -t=24c32
 fi
 
 
